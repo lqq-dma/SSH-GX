@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gxa.bj.dao.imp.UserMapper">
+    <!--<insert id="addItem" parameterType="com.gxa.bj.model.UserInfo">-->
+        <!--insert into UserInfo(userId,userName,userPwd,userEmail,reason)-->
+        <!--values(usernext.nextval,#{userName},#{userPwd},#{userEmail},#{reason})-->
+    <!--</insert>-->
+    <!--<delete id="removeItem">-->
+        <!--delete from UserInfo where userId=#{id}-->
+    <!--</delete>-->
+    <!--<update id="updateItem" parameterType="com.gxa.bj.model.UserInfo">-->
+        <!--update userInfo set-->
+        <!--<if test="userName!=null">-->
+            <!--userName = #{userName},-->
+        <!--</if>-->
+        <!--<if test="userPwd!=null">-->
+            <!--userPwd = #{userPwd},-->
+        <!--</if>-->
+        <!--<if test= "userEmail!=null">-->
+            <!--userEmail = #{userEmail},-->
+        <!--</if>-->
+        <!--<if test= "reason!=null">-->
+            <!--reason = #{reason},-->
+        <!--</if>-->
+        <!--userId=#{userId} Where userId=#{userId}-->
+    <!--</update>-->
+    <!--<select id="getModel" resultType="com.gxa.bj.model.UserInfo">-->
+        <!--select * from UserInfo where userId=#{userId}-->
+    <!--</select>-->
+    <!--<select id="getUsers" parameterType="java.lang.String" resultType="com.gxa.bj.model.UserInfo">-->
+        <!--select * from UserInfo where userName like '%${value}%'-->
+
+    <!--</select>-->
+
+    <!--<select id="getList"  parameterType="com.gxa.bj.model.UserInfo" resultType="com.gxa.bj.model.UserInfo">-->
+        <!--Select * From userInfo-->
+        <!--<where>-->
+            <!--<if test="userName!=null">-->
+                <!--And userName like #{userName}-->
+            <!--</if>-->
+            <!--<if test="userId>0">-->
+                <!--And userId =#{userId}-->
+            <!--</if>-->
+            <!--<if test="userPwd!=null and userPwd!=''">-->
+                <!--And userPwd like #{userPwd}-->
+            <!--</if>-->
+        <!--</where>-->
+    <!--</select>-->
+
+    <!--<select id="getListByPage" parameterType="com.gxa.bj.model.UserInfoPage"  resultType="com.gxa.bj.model.UserInfo">-->
+
+        <!--Select u.*-->
+        <!--From (Select rownum as num, userInfo.*-->
+        <!--from userInfo-->
+        <!--<where>-->
+            <!--<if test="userName!=null">-->
+                <!--And userName like #{userName}-->
+            <!--</if>-->
+            <!--<if test="userId >= 10">-->
+                <!--And userId =#{userId}-->
+            <!--</if>-->
+            <!--<if test="userPwd!=null and userPwd !='' ">-->
+                <!--And userPwd like #{userPwd}-->
+            <!--</if>-->
+        <!--</where>-->
+        <!--) u Where u.num between  #{startNum} and #{endNum}-->
+
+    <!--</select>-->
+</mapper>
